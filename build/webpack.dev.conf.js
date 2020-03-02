@@ -68,12 +68,16 @@ const devWebpackConfig = merge(baseWebpackConfig, {
   ]
 })
 
-module.exports = new Promise((resolve, reject) => {
+module.exports = env => new Promise((resolve, reject) => {
   portfinder.basePort = process.env.PORT || config.dev.port
   portfinder.getPort((err, port) => {
     if (err) {
       reject(err)
     } else {
+      devWebpackConfig.plugins.push(new webpack.DefinePlugin({
+          'process.env.HELLO_KEY': JSON.stringify((env && env.HELLO_KEY) || '')
+        })
+      )
       // publish the new Port, necessary for e2e tests
       process.env.PORT = port
       // add port to devServer config
