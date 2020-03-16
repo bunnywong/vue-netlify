@@ -2,7 +2,7 @@
 
 [![Netlify Status](https://api.netlify.com/api/v1/badges/3b5ffbc9-f3ad-44f0-b724-650aff5f8aa9/deploy-status)](https://app.netlify.com/sites/vue-netlify-test/deploys)
 
-For this VueJS webpack project. Demo for hide API key from git. Just inject by cmd line as below Build Setup reference.
+For this VueJS Webpack project. Demo for hiding API key from git. Just inject by cmd line as below Build Setup reference.
 
 The App is live [here](https://vue-netlify-test.netlify.com)
 
